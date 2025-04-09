@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff;
+  margin: 0;
+  animation: glitch 1.5s infinite linear;
+}
+
+nav {
+  margin-top: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  border-color: #fff;
+  transform: scale(1.1);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.content {
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 1rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.glitch {
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+a.icon-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.icon-link:hover {
+  text-shadow: 0 0 5px #fff;
+}
+
+.lain-img {
+  width: 250px;
+  margin: 1.5rem auto;
+  display: block;
+  filter: grayscale(100%) contrast(120%) brightness(90%);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lain-img:hover {
+  transform: scale(1.05);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.toolkit {
+margin-top: 3rem;
+text-align: center;
+}
+
+.toolkit h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+.language-logos {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1.5rem;
+padding: 1rem;
+}
+
+.language-logos img {
+width: 60px;
+height: 60px;
+transition: transform 0.3s ease, filter 0.3s ease;
+filter: grayscale(100%) contrast(110%);
+}
+
+.language-logos img:hover {
+transform: scale(1.1);
+filter: grayscale(0%) brightness(110%);
+}
+
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #fff;
+    color: black;
+  }
+  
+  body.light-mode header{
+    background-color: #fff;
+  }
+  
+  body.light-mode nav a {
+    color: black;
+  }
+  
+  body.light-mode nav a:hover {
+    border-color: black;
+  }
+  
+  body.light-mode footer {
+    color: #000;
+  }
+  
+  /* Toolkit Section for Light Mode */
+  body.light-mode .toolkit h2, body.light-mode
+  .toolkit .language-logos img {
+    filter: none;
+  }
+  
+  body.light-mode .lain-img {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+  }
+  
+  body.light-mode a{
+  color:black;
+  }
+  button#theme-toggle {
+    background-color: transparent;
+    color: #fff;
+    border:none;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 5px;
+  }
+  
+  button#theme-toggle:hover {
+    background-color: #fff;
+    color: #000;
+
+  }
+
+  body.light-mode button#theme-toggle:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  
