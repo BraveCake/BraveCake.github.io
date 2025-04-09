@@ -168,43 +168,82 @@ transform: scale(1.1);
 filter: grayscale(0%) brightness(110%);
 }
 
+.presence-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  z-index: 9999;
+  opacity: 0.95;
+  box-shadow: 0 0 10px #444;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.presence-widget p {
+  margin: 0.2rem 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+
+
+
 
 /* Light Mode Styles */
 body.light-mode {
     background-color: #fff;
     color: black;
-  }
+}
   
-  body.light-mode header{
+body.light-mode header{
     background-color: #fff;
-  }
+}
   
-  body.light-mode nav a {
+body.light-mode nav a {
     color: black;
-  }
+}
   
-  body.light-mode nav a:hover {
+body.light-mode nav a:hover {
     border-color: black;
-  }
+}
   
-  body.light-mode footer {
+body.light-mode footer {
     color: #000;
-  }
+}
   
   /* Toolkit Section for Light Mode */
-  body.light-mode .toolkit h2, body.light-mode
+body.light-mode .toolkit h2, body.light-mode
   .toolkit .language-logos img {
     filter: none;
-  }
+}
   
-  body.light-mode .lain-img {
+body.light-mode .lain-img {
     filter: grayscale(0%) contrast(100%) brightness(100%);
-  }
+}
   
-  body.light-mode a{
+body.light-mode a{
   color:black;
-  }
-  button#theme-toggle {
+}
+button#theme-toggle {
     z-index:1;
     background-color: transparent;
     color: #fff;
@@ -216,17 +255,21 @@ body.light-mode {
     top: 1rem;
     right: 1rem;
     border-radius: 5px;
-  }
+}
   
-  button#theme-toggle:hover {
+button#theme-toggle:hover {
     background-color: #fff;
     color: #000;
 
-  }
+}
 
-  body.light-mode button#theme-toggle:hover {
+body.light-mode button#theme-toggle:hover {
     background-color: #000;
     color: #fff;
-  }
+}
 
-  
+body.light-mode .presence-widget{
+  background:#fff;
+  color:black;
+
+}
