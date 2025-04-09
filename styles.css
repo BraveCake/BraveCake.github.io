@@ -205,6 +205,7 @@ body.light-mode {
   color:black;
   }
   button#theme-toggle {
+    z-index:1;
     background-color: transparent;
     color: #fff;
     border:none;
