@@ -2,23 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bravecake</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="a personal website of a very curious programmer">
+  <meta name="keywords" content="Bravecake, programming, Ali">
+  <meta name="author" content="Bravecake">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website">
   <meta property="og:title" content="bravecake's personal website">
   <meta property="og:url" content="https://bravecake.me/">
-  <meta property="og:image" content="https://bravecake.me/lain_repair.jpg">
+  <meta property="og:image" content="https://bravecake.me/lain_repair.webp">
   <meta property="og:description" content="a personal website of a very curious programmer">
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+<body> 
+  <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="light mode" >🌙</button>
   <header>
     <h1 class="glitch">Welcome to My Realm  
     </h1>
-    <img class="lain-img" src="lain_repair.jpg" alt="Lain Iwakura" onerror="this.style.display='none'" />
+    <img class="lain-img" src="lain_repair.webp" alt="Lain Iwakura" onerror="this.style.display='none'" />
     <div id="discord-status" class="presence-widget">
       <i class="fa-solid fa-circle-xmark close-btn"></i>
       <p>Loading status...</p>
@@ -28,7 +32,6 @@
       <a href="#toolkit">Toolkit</a>
       <a href="#contact">Contact</a>
     </nav>
-    <!-- Dark/Light Mode Toggle -->
   </header>
 
   <main class="content">
@@ -80,6 +83,13 @@
     const body = document.body;
     themeToggleButton.addEventListener('click', () => {
       body.classList.toggle('light-mode');
+      if(body.classList.contains('light-mode')) {
+	themeToggleButton.innerHTML = '☀️';
+	themeToggleButton.title = 'dark mode';
+      } else {
+	themeToggleButton.innerHTML = '🌙';
+	themeToggleButton.title = 'light mode';
+      }
     });
     const userId = "279803864033787905"; // Replace with your actual Discord user ID
 
