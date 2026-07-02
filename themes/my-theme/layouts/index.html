@@ -83,7 +83,6 @@
 		<footer>
 			<p>“No matter where you go, everyone's connected.” — Serial Experiments Lain</p>
 		</footer>
-		<p>script </p>
 {{ with resources.Get "scripts.js" }}
   {{ $script := . | resources.Minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
@@ -122,7 +121,7 @@ ws.onmessage = (event) => {
   }
 
   widget.innerHTML = `
-    <i class="fa-solid fa-circle-xmark close-btn"></i>
+    <i class="close-btn">✖</i>
     <p><strong>Discord:</strong> ${statusText}</p>
     <p>${activityText}</p>
   `;
