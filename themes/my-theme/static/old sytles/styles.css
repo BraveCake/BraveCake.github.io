@@ -24,11 +24,10 @@ header {
   position: relative;
 }
 
-h1 {
+h1:first-of-type  {
   font-size: 3rem;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff;
   margin: 0;
-  animation: glitch 1.5s infinite linear;
 }
 
 nav {
@@ -45,6 +44,15 @@ nav a {
   padding-bottom: 2px;
   transition: all 0.3s ease-in-out;
 }
+
+h3 a:hover {
+background-color: #fff;
+color: black;
+}
+article {
+	border: 1px solid #fff
+}
+
 
 nav a:hover {
   border-color: #fff;
@@ -167,6 +175,10 @@ filter: grayscale(100%) contrast(110%);
 transform: scale(1.1);
 filter: grayscale(0%) brightness(110%);
 }
+.language-logos img.invert-color:hover {
+transform: scale(1.1);
+filter: grayscale(0%) invert(1) brightness(110%);
+}
 
 .presence-widget {
   position: fixed;
@@ -272,4 +284,14 @@ body.light-mode .presence-widget{
   background:#fff;
   color:black;
 
+}
+.language-logos img.invert-color {
+  filter: grayscale(100%) contrast(110%) invert(1);
+}
+.invert-color{
+	filter:invert(1);
+}
+.icon{
+  width: 3ch;
+  margin-bottom: -3px;
 }

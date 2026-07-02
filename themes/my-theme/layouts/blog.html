@@ -1,0 +1,56 @@
+{{define "main"}}
+<section>
+
+<h2>Recent Articles</h2>
+
+<div class="blog-list">
+{{ range (where .Site.RegularPages "Section" "posts") }}
+<article class="blog-card">
+
+<h3>
+	<a href="{{.Permalink}}">
+	{{.Title}}
+</a>
+</h3>
+
+<div class="article-meta">
+	<time datetime="{{.Date}}">{{.Date}}</time>
+	{{.Params.Duration}} min read
+</div>
+
+<p>
+{{.Params.Description}}
+</p>
+
+<a class="read-more" href="{{.Permalink}}">
+Read →
+</a>
+
+</article>
+{{end}}
+
+<article class="blog-card">
+<h3>
+<a href="#">
+Coming Soon...</a>
+</h3>
+
+<div class="article-meta">
+Work in progress
+</div>
+
+<p>
+I'm currently writing articles about Java internals,
+Linux, networking, operating systems and reverse engineering.
+Stay tuned.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+
+{{end}}
